@@ -1,3 +1,662 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+p{
+  margin: 1em 0;
+}
+.announcement {
+  text-align: center;
+  padding: 5px 0;
+  width: 100%;
+  margin: 0 auto;
+  color: #000;
+  background: #E0E0E0;
+  font-family: "Sofia Pro Regular";
+  font-size: 13px;
+}
+
+
+.top-header {
+  background: #949494;
+  width: 100%;
+}
+.top-header-wrapper {
+  max-width: 1383px;
+  margin: 0 auto;
+  width: 95%;
+}
+.top-header-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-content: stretch;
+  align-items: center;
+  font-family: "Sofia Pro Regular";
+}
+.hamburger {
+  display: none;
+  background: #021641;
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  text-align: center;
+  color: #fff;
+  line-height: 40px;
+  font-size: 24px;
+}
+.sc-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-content: stretch;
+  align-items: center;
+}
+.sc-container a {
+  padding: 5px;
+  display: block;
+  color: #fff;
+  text-decoration: none;
+  transition: 0.3s ease;
+  margin: 0 5px;
+  text-transform: uppercase;
+  font-size: 10px;
+  line-height: 19px;
+}
+.cart-count {
+  min-width: 28px;
+  text-align: center;
+  background-color: #000F47;
+  font-weight: bold;
+  box-sizing: border-box;
+}
+
+/* NAVIGATION */
+.bottom-header {
+  width: 100%;
+  position: relative;
+}
+.bottom-header-wrapper {
+  max-width: 1383px;
+  margin: 0 auto;
+  width: 95%;
+  padding: 8px 0;
+}
+.bottom-header-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: stretch;
+  align-items: flex-end;
+}
+.logo {
+  max-width: 180px;
+  width: 22%;
+}
+.logo img {
+  height: auto;
+  max-width: 100%;
+  vertical-align: middle;
+}
+#nagvigation .main_menu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: block;
+  margin-left: 35px;
+}
+.main_menu li {
+  display: inline-block;
+  vertical-align: top;
+  margin: 0 22px 0;
+  list-style: none;
+}
+#nagvigation .main_menu li a {
+  font-size: 20px;
+  line-height: 39px;
+  color: #949494;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 0 0px;
+  border-bottom: 2px solid transparent;
+  transition: 0.3s ease;
+  font-family: "Sofia Pro Regular";
+}
+#nagvigation .main_menu li a:hover {
+  border-bottom: 2px solid #949494;
+}
+/* NAVIGATION SUB-MENU */
+.show {
+  display:block;
+}
+#nagvigation .main_menu li .sub-menu {
+  position: absolute;
+  left: 0;
+  margin: 0;
+  display: none;
+  background: #fff;
+  width: 100vw;
+  z-index: 4;
+}
+#nagvigation .main_menu li.women>.sub-menu ul {
+    background-image: url(../assets/women_ul_bg.webp);
+    background-repeat: no-repeat;
+    background-position: 130px 30px;
+    min-height: 350px;
+
+    width: 500px;
+    padding: 30px 20px;
+    padding-right: 310px;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+#nagvigation .main_menu li.men>.sub-menu ul {
+  background-image: url(../assets/men_ul_bg.webp);
+  background-repeat: no-repeat;
+  background-position: 130px 30px;
+  min-height: 350px;
+
+  width: 500px;
+  padding: 30px 20px;
+  padding-right: 310px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+#nagvigation .main_menu li .sub-menu ul li {
+  display: block;
+  margin: 0;
+}
+#nagvigation .main_menu li .sub-menu ul li a {
+  font-size: 18px;
+  line-height: 27px;
+  color: #949494;
+  text-transform: none;
+  border: 0;
+}
+/* NAVIGATION SUB-MENU */
+
+
+
+/* FORM */
+#nagvigation .main_menu li .mob_search_form .searchicon {
+  border: 0;
+  padding: 0;
+  font-size: 23px !important;
+  line-height: 20px;
+  font-family: 'FontAwesome';
+  color: #949494;
+  min-width: 24px;
+  min-height: 24px;
+  font-weight: normal;
+  background: url(../assets/search-icon.jpg) no-repeat;
+  position: relative;
+  top: 6px;
+}
+
+#nagvigation .main_menu li .mob_search_form .ui-autocomplete-input {
+  height: 39px;
+  font-size: 16px;
+  color: #949494;
+  border-color: #949494;
+  border-top: 0;
+  border-left: 0;
+  border-right: 0;
+  outline: none;
+}
+input {
+  text-rendering: auto;
+  color: -internal-light-dark-color(black, white);
+  letter-spacing: normal;
+  word-spacing: normal;
+  text-transform: none;
+  text-indent: 0px;
+  text-shadow: none;
+  display: inline-block;
+  text-align: start;
+  -webkit-appearance: textfield;
+  background-color: -internal-light-dark-color(white, black);
+  -webkit-rtl-ordering: logical;
+  cursor: text;
+  margin: 0em;
+  font: 400 13.3333px Arial;
+  padding: 1px 0px;
+  border-width: 2px;
+  border-style: inset;
+  border-color: initial;
+  border-image: initial;
+}
+/* NAVIGATION */
+
+
+.notice {
+  background-color: #e0e0e0;
+  line-height: 12px;
+  padding: 0.1px;
+  text-align: center;
+  font-size: 15px;
+  font-weight: 600;
+  font-family: 'Sofia Pro Regular';
+}
+
+
+
+/* EMAIL */
+.email-signup-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin: 0 auto;
+  font-family: 'Sofia Pro Regular';
+  box-sizing: border-box;
+}
+.email-signup-wrapper .signup {
+  width: 50%;
+  text-align: right;
+  color: #021641;
+  box-sizing: border-box;
+}
+.homenewsletter {
+  width: 50%;
+  padding-left: 20px;
+  box-sizing: border-box;
+}
+
+
+.homeemail {
+  width: 40%;
+  margin-right: 0;
+  padding: 7px 10px;
+  display: inline;
+  margin: 0;
+  float: left;
+  border: 1px solid #000;
+  color: #000;
+  height: auto;
+  font: 13px "HelveticaNeue","Helvetica Neue",Helvetica,Arial,sans-serif;
+  -webkit-appearance: none;
+  border-radius: 0px;
+}
+.newslettersubmit {
+  background: #041944;
+  font-family: 'SofiaPro','ArialNarrow','Arial-Narrow','Arial Narrow',Arial,sans-serif;
+  color: #fff;
+  cursor: pointer;
+  border: 2px solid #041944;
+  font-weight: bold;
+  display: inline;
+  margin: 0;
+  padding: 6px 9px;
+  text-align: center;
+  width: 15%;
+  float: left;
+  border-radius: 0px;
+}
+
+
+.note {
+  width: 100%;
+  font-size: 12px;
+  color: #021641;
+  line-height: 18px;
+  text-align: center;
+  border: 0;
+  font-weight: normal;
+}
+.privacy {
+  text-decoration: underline;
+  /* color: #021641; */
+  color: red;
+}
+
+
+
+
+
+/* TOP BANNER */
+.top-banner-section {
+  position: relative;
+  text-align: center;
+}
+.top-banner-img img {
+  width: 100%;
+  height: 100%;
+}
+.mobile-top-banner {
+  display: none;
+}
+.content-links-women {
+  position: absolute;
+  top: 40%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.content-links-women img {
+  max-width: 200px;
+  margin-bottom: 20px;
+}
+.content-links-men {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.content-links-men img {
+  max-width: 200px;
+  margin-bottom: 20px;
+}
+
+
+
+/* MID-BANNER */
+.mid-banner-section {
+  display: flex;
+  padding-left: 8%;
+  padding-right: 8%;
+  margin: 0 auto;
+  padding-top: 80px;
+  position: relative;
+  padding-bottom: 55px;
+  background-color: #fff;
+}
+.mid-banner-left-wrapper {
+  width: 50%;
+}
+.left-banner-img {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  display: block;
+}
+.left-banner-img img {
+  height: auto;
+  max-width: 100%;
+}
+.left-banner-content {
+  text-align: right;
+}
+.left-banner-content a {
+  margin: 0 auto 10px;
+  font-size: 1.375vw;
+  color: #949494;
+  line-height: 1.4;
+  text-decoration: none;
+  font-family: 'Sofia Pro Regular';
+}
+
+
+.mid-banner-right-wrapper {
+  width: 50%;
+}
+.right-banner-img {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  display: block;
+}
+.right-banner-img img {
+  width: 70%;
+  margin-top: 10%;
+}
+.right-banner-content {
+  text-align: left;
+  box-sizing: border-box;
+  padding-left: 30%;
+}
+.right-banner-content a {
+  /* margin: 0 auto 10px; */
+  font-size: 1.375vw;
+  color: #949494;
+  line-height: 1.4;
+  text-decoration: none;
+  font-family: 'Sofia Pro Regular';
+}
+
+
+
+ /* BOTTOM-BANNER */
+ .bottom-banner-img img {
+  width: 100%;
+  height: 100%;
+}
+.bottom-banner-content {
+  text-align: center;
+}
+.bottom-banner-content a {
+  margin: 0 auto 10px;
+  font-size: 1.375vw;
+  color: #949494;
+  line-height: 1.4;
+  text-decoration: none;
+  font-family: 'Sofia Pro Regular';
+}
+
+
+/* SOCIAL-MEDIA */
+.socialmedia .socialmedia-banner-wrapper {
+  text-align: center;
+  color: #0e1841;
+  margin-bottom: 15px;
+  max-width: 1383px;
+  margin: 0 auto;
+  width: 95%;
+}
+.socialmedia-banner-wrapper img {
+  width: 55px;
+  display: inline-flex;
+}
+.socialmedia-banner-wrapper h3 {
+  color: #0e1841;
+  font-size: 35px;
+  line-height: 40px;
+  clear: both;
+  font-weight: 700;
+  margin: 0;
+  text-rendering: optimizeLegibility;
+  text-transform: none;
+  letter-spacing: 0;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+}
+.socialmedia-banner-wrapper p {
+  font-size: 21px;
+  color: #0e1841;
+  line-height: 26px;
+}
+.socialmedia-banner-wrapper p a {
+  background-color: transparent;
+  color: #0e1841;
+  font-size: 17px;
+  text-decoration: none;
+}
+
+
+
+
+
+
+
+/* SLIDER */
+.flickity-page-dots {
+  display: none;
+}
+.slick {
+  width: 309px;
+  display: inline-block;
+}
+.slick  {
+    max-width: 100%;
+    max-height: 331px;
+    min-height: 331px;
+  }
+  .promoslide-main {
+    width: 100%;
+    display: inline-block;
+  }
+
+  .w-95 { width: 95%; }
+  .footer-wrapper { border-top: 3px solid #8f8f8f; }
+
+  .py-30x { padding: 30px 0; }
+
+  .footer-nav {
+    list-style: none;
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: stretch;
+    align-items: center;
+    justify-content: center;
+  }
+  .footer-nav li {
+    font-size: 15px;
+    line-height: 23px;
+    font-weight: bolder;
+    font-family: "Sofia Pro";
+    color: #021541;
+    text-transform: uppercase;
+    display: block;
+  }
+.footer-nav-list .footer-nav li a:hover {
+  color: #c50021; 
+}
+.footer-nav-list .footer-nav li+li:before {
+  content: "|";
+  margin: 0 10px;
+}
+
+.social-news-wrapper {
+    display: flex;
+    width: 70%;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 auto;
+}
+.social-block {
+  width: 50%;
+  box-sizing: border-box;
+  padding-left: 8%;
+  display: block;
+}
+.payment-methods {
+  text-transform: uppercase;
+  margin-left: 55px;
+  font-weight: 400;
+  font-size: 20px;
+  font-family: "Sofia Pro Regular";
+}
+
+.payment-img {
+  display: flex;
+  width: 50%;
+  justify-content: space-between;
+}
+
+.payment-img .icons {
+  width:50px;
+  height:25px;
+}
+
+.payment-img .icons .cod {
+  width:150px; height:30px;
+}
+
+.payment-img .logo {
+  display: block;
+  height: 100%;
+  width:100%
+}
+.news-letter {
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 20px;
+  font-family: "Sofia Pro Regular";
+  margin-left: 22px;
+}
+.newsletter-block {
+  width: 50%;
+  box-sizing: border-box;
+  padding-left: 8%;
+}
+.newsletter-input {
+  margin-right: 0;
+  padding: 7px 10px;
+  width: 73%;
+  display: inline;
+  margin: 0;
+  float: left;
+  border: 1px solid #000;
+  color: #000;
+  height: auto;
+  font: 13px "HelveticaNeue","Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+.button-small {
+  background: #041944;
+  font-family: 'SofiaPro','ArialNarrow','Arial-Narrow','Arial Narrow',Arial,sans-serif;
+  color: #fff;
+  cursor: pointer;
+  border: 2px solid #041944;
+  font-weight: bold;
+  display: inline;
+  margin: 0;
+  width: 15%;
+  float: left;
+  padding: 2px 9px;
+}
+
+
+
+
+
+
+
+.footer-info-link {
+  width: 50%;
+  margin: 0 auto;
+  font-family: 'Sofia Pro Regular';
+  padding-top: 10px;
+}
+#footer .footer-wrapper .footer-info-link .footer-info-1 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 15px;
+  font-weight: 600;
+  font-size: 14px;
+  color: #737171;
+}
+.footer-info-1 a {
+  font-weight: 600;
+  font-size: 14px;
+  color: #737171;
+  text-decoration: none;
+}
+.footer-info-2 {
+  text-align: center;
+  margin-bottom: 15px;
+  font-weight: 600;
+  font-size: 14px;
+  color: #737171;
+}
+.footer-info-3 {
+  text-align: center;
+  margin-bottom: 15px;
+  font-weight: 600;
+  font-size: 14px;
+  color: #737171;
+}

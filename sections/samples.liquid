@@ -1,0 +1,90 @@
+<hr>
+<div id="section-cta">
+   <div id="textsection">
+        <div class="contenttext">
+            <h1>{{ section.settings.text-box-title }}</h1>
+            <h3>{{ section.settings.text-box-content }}</h3>
+        </div>
+    </div>
+  
+  <div class="section-header text-center">
+    <h3> {{ section.settings.text-box }} </h3>
+  </div>
+
+  {% for block in section.blocks %}  
+  <div class="btn" id="call-to-action">   
+    <a href="{{ block.settings.link }}" class="btn">{{ block.settings.linktext }}</a>
+  </div> 
+  {% endfor %}
+
+</div>  
+<hr>
+{% schema %}
+  {
+  "name": "CTA Blocks",
+  "max_blocks": 3,
+  "settings": [
+    {
+      "id": "text-box",
+      "type": "text",
+      "label": "Heading",
+      "default": "Title"
+    },
+	{
+                "id": "text-box-title",
+                "type": "text",
+                "label": "Heading",
+                "default": "Title"
+            },
+        {
+                "id": "text-box-content",
+                "type": "richtext",
+                "label": "Add content text below",
+                "default": "<p>Add your text here</p>"
+        }
+  ],
+  "blocks": [
+    {
+      "type": "select",
+      "name": "dagdag",
+      "settings": [
+        {
+          "id": "link",
+          "type": "url",
+             "label": "Button link"
+        },
+        {
+          "id": "linktext",
+          "type": "text",
+          "label": "Button text",
+          "default": "Click here"
+        }
+      ]
+    },
+    {
+      "type": "hatdog",
+      "name": "isa pa",
+      "settings": [
+        {
+            "id": "ha",
+            "type": "text",
+            "label": "Teks",
+            "default": "Maglagay ng teks"
+        }
+    ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Call to Action Blocks",
+      "category": "CTA button"
+    }
+  ]
+}
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}
